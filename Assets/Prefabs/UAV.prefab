@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3805106979361676000}
   - component: {fileID: 4272534620105366729}
+  - component: {fileID: 1547996360}
   m_Layer: 0
   m_Name: UAV
   m_TagString: Untagged
@@ -82,3 +83,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1547996360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491631101511454036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48063ead07ea7b64c827ae38069df2de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: 0
+  spawnGameObject: {fileID: 0}
+  currentIndex: 0
+  pulseTime: 2
+  waypoints:
+  - {x: 0, y: 3}
