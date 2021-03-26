@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class GarbageCollector : MonoBehaviour
 {
-    private void Start()
-    {
-    }
+
     void Update()
     {
-        
+
         if (this.transform.position.y > Camera.main.orthographicSize)
         {
             Destroy(this.gameObject);
+        }
+        if (this.transform.position.y < -6)
+        {
+            this.gameObject.SetActive(false);
         }
     }
 }
