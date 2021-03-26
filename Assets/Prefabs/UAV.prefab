@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3805106979361676000}
   - component: {fileID: 4272534620105366729}
   - component: {fileID: 1547996360}
+  - component: {fileID: 335025056}
   m_Layer: 0
   m_Name: UAV
   m_TagString: Untagged
@@ -101,3 +102,15 @@ MonoBehaviour:
   pulseTime: 2
   waypoints:
   - {x: 0, y: 3}
+--- !u!114 &335025056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3491631101511454036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbac9ad02592b2c41b5b025282cd6fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
