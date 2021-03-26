@@ -10,7 +10,11 @@ public class GameManager : MonoBehaviour
     {
         public int flamingoName;
     }
-    public int flamingos = 3;
+    public int flamingos = 10;
+    private void Start()
+    {
+        flamingos = 10;
+    }
     public void decrementFlamingos()
     {
         if (flamingos >= 0)
@@ -18,6 +22,11 @@ public class GameManager : MonoBehaviour
             flamingos = flamingos - 1;
             FlamingoTaken?.Invoke(this, new FlamingoTakenArgs { flamingoName = flamingos });
         }
+        else
+        {
+            this.gameObject.GetComponent<SceneSwitch>().SwitchScene(0);
+        }
+
     }
 }
 
