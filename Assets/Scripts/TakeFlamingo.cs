@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TakeFlamingo : MonoBehaviour
 {
+
     GameManager instance;
     private void Start()
     {
@@ -11,6 +12,6 @@ public class TakeFlamingo : MonoBehaviour
     }
     private void OnDestroy()
     {
-        instance.flamingos = instance.flamingos - 1;
+        instance.decrementFlamingos();
     }
 }
