@@ -4,26 +4,16 @@ using UnityEngine;
 
 public class DisableOnClick : MonoBehaviour
 {
-    Vector3 touchPosition = Vector3.zero;
-    Collider2D bodyCollider = null;
+    Collider2D disableCollider = null;
     private void Start()
     {
-        bodyCollider = this.GetComponent<BoxCollider2D>();
+        disableCollider = FindObjectOfType<GameManager>().GetComponent<BoxCollider2D>();
     }
-
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonDown(0) || (Input.touchCount >= 1 && Input.touches[0].phase == TouchPhase.Began))
         {
-            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (bodyCollider.OverlapPoint(mousePosition))
-            {
-                this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-                Destroy(this);
-            }
-        }else if(Input.touchCount >= 1 && Input.touches[0].phase == TouchPhase.Ended)
-        { 
-            if (bodyCollider.OverlapPoint(touchPosition))
+            if (disableCollider.OverlapPoint(this.transform.position))
             {
                 this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
                 Destroy(this);

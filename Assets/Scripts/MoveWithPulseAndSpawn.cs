@@ -19,6 +19,7 @@ public class MoveWithPulseAndSpawn : MonoBehaviour
 
     void Start()
     {
+        pulseTime = pulseTime + Random.Range(-1, 1);
         if (spawn) Spawn(waypoints[0]);
         if (Vector2.Distance(this.transform.position, waypoints[0]) > 0)
         {
